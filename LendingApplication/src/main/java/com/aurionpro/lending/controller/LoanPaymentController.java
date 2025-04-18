@@ -1,20 +1,27 @@
 package com.aurionpro.lending.controller;
 
-import com.aurionpro.lms.dto.LoanPaymentResponseDTO;
-import com.aurionpro.lms.dto.PaymentCompletionRequestDto;
-import com.aurionpro.lms.exception.PaymentProcessingException;
-import com.aurionpro.lms.service.LoanPaymentService;
-import com.aurionpro.lms.service.PaymentService;
-import com.razorpay.RazorpayException;
+import java.math.BigDecimal;
+import java.util.List;
 
-import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.math.BigDecimal;
-import java.util.List;
+import com.aurionpro.lending.dto.LoanPaymentResponseDTO;
+import com.aurionpro.lending.dto.PaymentCompletionRequestDto;
+import com.aurionpro.lending.exception.PaymentProcessingException;
+import com.aurionpro.lending.service.LoanPaymentService;
+import com.aurionpro.lending.service.PaymentService;
+import com.razorpay.RazorpayException;
+
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/loan-payments")

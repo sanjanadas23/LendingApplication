@@ -1,15 +1,23 @@
 package com.aurionpro.lending.controller;
 
-import com.aurionpro.lms.dto.LoanOfficerRequestDTO;
-import com.aurionpro.lms.dto.LoanOfficerResponseDTO;
-import com.aurionpro.lms.service.LoanOfficerService;
-import jakarta.validation.Valid;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
+import com.aurionpro.lending.dto.LoanOfficerRequestDTO;
+import com.aurionpro.lending.dto.LoanOfficerResponseDTO;
+import com.aurionpro.lending.service.LoanOfficerService;
+
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/loan-officers")

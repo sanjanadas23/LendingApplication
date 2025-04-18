@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.aurionpro.lms.dto.LoanRequestDTO;
-import com.aurionpro.lms.dto.LoanResponseDTO;
-import com.aurionpro.lms.dto.LoanUpdateDTO;
-import com.aurionpro.lms.service.LoanService;
+import com.aurionpro.lending.dto.LoanRequestDTO;
+import com.aurionpro.lending.dto.LoanResponseDTO;
+import com.aurionpro.lending.dto.LoanUpdateDTO;
+import com.aurionpro.lending.service.LoanService;
 
 import jakarta.validation.Valid;
 

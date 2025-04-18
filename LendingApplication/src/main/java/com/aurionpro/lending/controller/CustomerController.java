@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.aurionpro.lms.dto.CustomerResponseDTO;
-import com.aurionpro.lms.dto.SelfDeleteRequest;
-import com.aurionpro.lms.service.CustomerService;
+import com.aurionpro.lending.dto.CustomerResponseDTO;
+import com.aurionpro.lending.dto.SelfDeleteRequest;
+import com.aurionpro.lending.service.CustomerService;
 
 import jakarta.validation.Valid;
 

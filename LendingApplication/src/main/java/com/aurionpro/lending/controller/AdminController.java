@@ -18,9 +18,9 @@ import com.aurionpro.lending.dto.LoanSchemeResponseDTO;
 import com.aurionpro.lending.dto.LoanSchemeSoftDeleteRequest;
 import com.aurionpro.lending.dto.UserResponseDTO;
 import com.aurionpro.lending.service.AdminService;
-import com.aurionpro.lms.service.CustomerService;
-import com.aurionpro.lms.service.LoanSchemeService;
-import com.aurionpro.lms.service.UserService;
+import com.aurionpro.lending.service.CustomerService;
+import com.aurionpro.lending.service.LoanSchemeService;
+import com.aurionpro.lending.service.UserService;
 
 @RestController
 @RequestMapping("/api/admin")

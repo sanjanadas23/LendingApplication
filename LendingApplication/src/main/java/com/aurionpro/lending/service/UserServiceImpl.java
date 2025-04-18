@@ -25,7 +25,7 @@ import com.aurionpro.lending.repository.CustomerRepository;
 import com.aurionpro.lending.repository.LoanOfficerRepository;
 import com.aurionpro.lending.repository.RoleRepository;
 import com.aurionpro.lending.repository.UserRepository;
-import com.aurionpro.lms.security.JwtUtil;
+import com.aurionpro.lending.security.JwtUtil;
 
 @Service
 public class UserServiceImpl implements UserService {

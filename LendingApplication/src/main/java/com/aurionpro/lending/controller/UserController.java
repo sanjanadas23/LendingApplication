@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.aurionpro.lms.dto.JwtResponseDTO;
-import com.aurionpro.lms.dto.LoginRequestDTO;
-import com.aurionpro.lms.dto.UserRequestDTO;
-import com.aurionpro.lms.dto.UserResponseDTO;
-import com.aurionpro.lms.service.UserService;
+import com.aurionpro.lending.dto.JwtResponseDTO;
+import com.aurionpro.lending.dto.LoginRequestDTO;
+import com.aurionpro.lending.dto.UserRequestDTO;
+import com.aurionpro.lending.dto.UserResponseDTO;
+import com.aurionpro.lending.service.UserService;
 
 import jakarta.validation.Valid;
 
