@@ -57,5 +57,9 @@ public class Document {
 	@Column(nullable = false)
 	@Enumerated(EnumType.STRING)
 	private DocumentStatus status = DocumentStatus.PENDING_VERIFICATION;
+	
+	public enum DocumentStatus {
+		PENDING_VERIFICATION, APPROVED, REJECTED
+	}
 
 }

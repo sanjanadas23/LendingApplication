@@ -73,6 +73,21 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+    		<groupId>com.sun.mail</groupId>
+    		<artifactId>javax.mail</artifactId>
+    		<version>1.6.2</version>
+		</dependency>
+		<dependency>
+    		<groupId>com.razorpay</groupId>
+    		<artifactId>razorpay-java</artifactId>
+    		<version>1.4.5</version>
+		</dependency>
+		<dependency>
+    		<groupId>com.cloudinary</groupId>
+    		<artifactId>cloudinary-http44</artifactId>
+    		<version>1.38.0</version>
+		</dependency>
 	</dependencies>
 
 	<build>
