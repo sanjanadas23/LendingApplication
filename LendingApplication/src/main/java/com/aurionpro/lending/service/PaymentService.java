@@ -1,18 +1,16 @@
 package com.aurionpro.lending.service;
 
-import java.math.BigDecimal;
-
+import com.razorpay.Order;
+import com.razorpay.RazorpayClient;
+import com.razorpay.RazorpayException;
+import com.razorpay.Utils;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
-import com.razorpay.RazorpayClient;
-import com.razorpay.RazorpayException;
-import com.razorpay.Utils;
-
-import jakarta.persistence.criteria.Order;
+import java.math.BigDecimal;
 
 @Service
 public class PaymentService {
@@ -50,7 +48,7 @@ public class PaymentService {
 		initializeRazorpayClient();
 
 		JSONObject orderRequest = new JSONObject();
-		orderRequest.put("amount", amount.multiply(BigDecimal.valueOf(100)).intValue());
+		orderRequest.put("amount", amount.multiply(BigDecimal.valueOf(100)).intValue()); 
 		orderRequest.put("currency", "INR");
 		orderRequest.put("receipt", "loan_payment_" + loanPaymentId);
 		orderRequest.put("payment_capture", 1);

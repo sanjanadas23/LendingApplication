@@ -1,18 +1,22 @@
 package com.aurionpro.lending.service;
 
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.net.PasswordAuthentication;
 import java.util.List;
 import java.util.Optional;
 import java.util.Properties;
 import java.util.stream.Collectors;
 
+import javax.mail.Authenticator;
+import javax.mail.Message;
 import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-import org.apache.logging.log4j.message.Message;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -30,10 +34,7 @@ import com.aurionpro.lending.repository.LoanOfficerRepository;
 import com.aurionpro.lending.repository.LoanPaymentRepository;
 import com.aurionpro.lending.repository.LoanRepository;
 import com.aurionpro.lending.repository.UserRepository;
-import com.sun.jdi.connect.Transport;
-import com.sun.net.httpserver.Authenticator;
 
-import jakarta.websocket.Session;
 
 @Service
 public class NotificationServiceImpl implements NotificationService {
