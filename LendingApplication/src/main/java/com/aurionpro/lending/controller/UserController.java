@@ -46,4 +46,39 @@ public class UserController {
 		JwtResponseDTO responseDTO = userService.login(loginRequestDTO);
 		return ResponseEntity.ok(responseDTO);
 	}
+	
+	
 }
+
+
+
+
+
+
+
+//@RestController
+//@RequestMapping("/api/users")
+//public class UserController {
+//
+//	@Autowired
+//	private UserService userService;
+//
+//	@PostMapping("/registerUser")
+//	public ResponseEntity<UserResponseDTO> registerUser(@Valid @RequestBody UserRequestDTO requestDTO) {
+//		UserResponseDTO responseDTO = userService.registerUser(requestDTO, requestDTO.getRoleName());
+//		return ResponseEntity.status(201).body(responseDTO);
+//	}
+//
+//	@GetMapping("/getUserById/{id}")
+//	@PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_LOAN_OFFICER')")
+//	public ResponseEntity<UserResponseDTO> getUserById(@PathVariable int id) {
+//		UserResponseDTO responseDTO = userService.getUserById(id);
+//		return ResponseEntity.ok(responseDTO);
+//	}
+//
+//	@PostMapping("/login")
+//	public ResponseEntity<JwtResponseDTO> login(@Valid @RequestBody LoginRequestDTO loginRequestDTO) {
+//		JwtResponseDTO responseDTO = userService.login(loginRequestDTO);
+//		return ResponseEntity.ok(responseDTO);
+//	}
+//}
