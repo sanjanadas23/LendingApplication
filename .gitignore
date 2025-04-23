@@ -7,6 +7,10 @@ build/
 .vscode/
 *.iml
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9b7217bee0573b77fe701019f41d13f8ae445a36
 
 
 # Ignore dependencies and environment files
