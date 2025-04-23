@@ -6,14 +6,9 @@
     min-height: 100vh;
     gap: 16px;
     padding: 20px;
-    background-color: #f5f5f5;
-  }
-  
-  .error-message {
-    color: red;
-    margin-top: 16px;
-    text-align: center;
-    width: 100%;
+    background-color: #ffffff; /* changed from #f5f5f5 to flat white */
+    font-family: 'Segoe UI', sans-serif;
+    color: #000000;
   }
   
   .cards {
@@ -22,3 +17,28 @@
     gap: 20px;
     flex-wrap: wrap;
   }
+  
+  .error-message {
+    color: #d32f2f; /* muted red for better contrast */
+    margin-top: 16px;
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+  }
+  
+  /* Optional Button Styling */
+  .dashboard-container button {
+    margin-top: 12px;
+    padding: 8px 16px;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dashboard-container button:hover {
+    background-color: #f0f0f0;
+  }
+  
