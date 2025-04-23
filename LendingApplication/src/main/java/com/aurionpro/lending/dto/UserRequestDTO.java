@@ -26,6 +26,6 @@ public class UserRequestDTO {
 	@Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@#$%^&+=!]).{8,}$", message = "Password must contain at least one uppercase, one lowercase, one digit, and one special character")
 	private String password;
 	
-//	@NotBlank(message = "Role name is required")
-//    private String roleName;
+	@NotBlank(message = "Role name is required")
+    private String roleName;
 }
