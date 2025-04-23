@@ -7,8 +7,7 @@ build/
 .vscode/
 *.iml
 
-# Ignore NodeModule
-.node_modules/
+
 
 
 # Ignore dependencies and environment files
