@@ -90,6 +90,15 @@ public class UserServiceImpl implements UserService {
 
 		// Auto assign loan officer
 		customerService.assignLoanOfficer(customer.getId());
+		
+		
+//		// Auto assign loan officer
+//	    try {
+//	        customerService.assignLoanOfficer(customer.getId());
+//	    } catch (ResourceNotFoundException e) {
+//	        // Log the error but allow registration to proceed
+//	        System.err.println("Warning: Could not assign loan officer: " + e.getMessage());
+//	    }
 
 		return toResponseDTO(user);
 	}
