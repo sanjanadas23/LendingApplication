@@ -5,7 +5,7 @@
 }
 
 h1 {
-    color: #1976d2;
+    color: #0c0f11;
     text-align: center;
     margin-bottom: 30px;
 }
@@ -21,7 +21,7 @@ mat-card {
 }
 
 mat-card-header {
-    background-color: #1976d2;
+    background-color: #090b0e;
     color: white;
 }
 

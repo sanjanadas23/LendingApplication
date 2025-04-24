@@ -27,7 +27,7 @@
     }
 
     mat-header-cell {
-        background-color: #1976d2;
+        background-color: #080b0e;
         color: #fff;
         font-weight: 600;
     }
@@ -62,7 +62,7 @@
         }
 
         &[color="primary"] {
-            color: #1976d2;
+            color: #07101a;
 
             &:hover:not([disabled]) {
                 background-color: rgba(25, 118, 210, 0.1);

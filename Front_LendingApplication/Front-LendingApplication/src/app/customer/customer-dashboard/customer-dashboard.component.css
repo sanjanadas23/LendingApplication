@@ -1,4 +1,4 @@
-.dashboard-container {
+/* .dashboard-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -47,4 +47,202 @@ mat-card-actions {
     color: red;
     text-align: center;
     width: 100%;
-}
+} */
+
+
+/* .dashboard-container {
+    padding: 40px 24px;
+    background-color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    color: #000000;
+    overflow-x: auto;
+    text-align: center;
+  }
+  
+  .dashboard-container h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #111111;
+    margin-bottom: 32px;
+  }
+  
+  .card-scroll-wrapper {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scrollbar-width: thin;
+    scrollbar-color: #000000 #e0e0e0;
+  }
+  
+  .card-scroll-wrapper::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .card-scroll-wrapper::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 4px;
+  }
+  
+  .dashboard-card {
+    flex-shrink: 0;
+    width: 260px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    background-color: #ffffff;
+    transition: transform 0.25s ease;
+  }
+  
+  .dashboard-card:hover {
+    transform: translateY(-6px);
+  }
+  
+  mat-card-header {
+    background-color: #000000;
+    color: #ffffff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  mat-card-title {
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+  
+  mat-card-content {
+    padding: 20px;
+    font-size: 15px;
+    color: #333333;
+  }
+  
+  mat-card-actions {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+  }
+  
+  mat-card-actions button {
+    padding: 10px 20px;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  mat-card-actions button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .error-message {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 12px;
+    border-radius: 6px;
+    margin-top: 24px;
+    text-align: center;
+  } */
+  
+
+
+
+
+  .dashboard-container {
+    padding: 48px 32px;
+    background-color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    color: #000000;
+    text-align: center;
+  }
+  
+  .dashboard-container h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 40px;
+  }
+  
+  .card-scroll-wrapper {
+    display: flex;
+    gap: 32px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+  
+    /* Hide scrollbar but keep functionality */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .card-scroll-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+  
+  .dashboard-card {
+    flex-shrink: 0;
+    width: 300px;
+    border: 1px solid #000000;
+    border-radius: 12px;
+    background-color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .dashboard-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  mat-card-header {
+    background-color: #000000;
+    color: #ffffff;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    padding: 16px;
+  }
+  
+  mat-card-title {
+    font-size: 1.3em;
+    font-weight: 600;
+  }
+  
+  mat-card-content {
+    padding: 24px;
+    font-size: 16px;
+    color: #333333;
+    min-height: 100px;
+  }
+  
+  mat-card-actions {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  mat-card-actions button {
+    padding: 12px 24px;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  mat-card-actions button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .error-message {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 16px;
+    border-radius: 6px;
+    margin-top: 32px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
