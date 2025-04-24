@@ -45,9 +45,9 @@ public class LoanServiceImpl implements LoanService {
 
     @Override
     public LoanResponseDTO applyForLoan(LoanRequestDTO requestDTO) {
-        Customer customer = customerRepository.findByIdAndIsDeletedFalse(requestDTO.getCustomerId())
-                .orElseThrow(() -> new ResourceNotFoundException("Customer not found with ID: " + requestDTO.getCustomerId()));
-
+//        Customer customer = customerRepository.findByIdAndIsDeletedFalse(requestDTO.getCustomerId())
+//                .orElseThrow(() -> new ResourceNotFoundException("Customer not found with ID: " + requestDTO.getCustomerId()));
+Customer customer=(Customer) customerRepository.findById(requestDTO.getCustomerId()).get();
         if (customer.isDeleted()) {
             throw new IllegalStateException("Cannot apply for loan: Customer account is deactivated");
         }
@@ -61,9 +61,9 @@ public class LoanServiceImpl implements LoanService {
                 .orElseThrow(() -> new ResourceNotFoundException("Loan scheme not found with ID: "
                         + requestDTO.getLoanSchemeId() + " or it has been deactivated"));
 
-        LoanStatus status = loanStatusRepository.findByStatusName("PENDING")
+       LoanStatus status = loanStatusRepository.findByStatusName("PENDING")
                 .orElseThrow(() -> new ResourceNotFoundException("Loan status PENDING not found"));
-
+//        LoanStatus status=
         Loan loan = new Loan();
         loan.setAmount(requestDTO.getAmount());
         loan.setCustomer(customer);

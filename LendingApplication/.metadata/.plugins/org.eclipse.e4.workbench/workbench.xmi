@@ -10,6 +10,7 @@
     <persistedState key="workingSets" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workingSets/>"/>
     <persistedState key="aggregateWorkingSetId" value="Aggregate for window 1744979692741"/>
     <tags>topLevel</tags>
+    <tags>shellMaximized</tags>
     <children xsi:type="basic:PartSashContainer" xmi:id="_hKBsBRxREfCFNfQv6Li-JA" selectedElement="_hKBsBhxREfCFNfQv6Li-JA" horizontal="true">
       <children xsi:type="advanced:PerspectiveStack" xmi:id="_hKBsBhxREfCFNfQv6Li-JA" elementId="org.eclipse.ui.ide.perspectivestack" containerData="7500" selectedElement="_hY0V8RxREfCFNfQv6Li-JA">
         <children xsi:type="advanced:Perspective" xmi:id="_hY0V8RxREfCFNfQv6Li-JA" elementId="org.eclipse.jdt.ui.JavaPerspective" selectedElement="_hY0V8hxREfCFNfQv6Li-JA" label="Java" iconURI="platform:/plugin/org.eclipse.jdt.ui/$nl$/icons/full/eview16/jperspective.png">
@@ -57,15 +58,9 @@
           <tags>persp.newWizSC:org.eclipse.ui.editors.wizards.UntitledTextFileWizard</tags>
           <tags>persp.perspSC:org.eclipse.jdt.ui.JavaBrowsingPerspective</tags>
           <tags>persp.perspSC:org.eclipse.debug.ui.DebugPerspective</tags>
-          <tags>persp.editorOnboardingImageUri:platform:/plugin/org.eclipse.jdt.ui/$nl$/icons/full/onboarding_jperspective.png</tags>
-          <tags>persp.editorOnboardingText:Open a file or drop files here to open them.</tags>
           <tags>persp.showIn:org.eclipse.jdt.ui.PackageExplorer</tags>
           <tags>persp.showIn:org.eclipse.team.ui.GenericHistoryView</tags>
           <tags>persp.showIn:org.eclipse.ui.navigator.ProjectExplorer</tags>
-          <tags>persp.editorOnboardingCommand:Find Actions$$$Ctrl+3</tags>
-          <tags>persp.editorOnboardingCommand:Show Key Assist$$$Ctrl+Shift+L</tags>
-          <tags>persp.editorOnboardingCommand:New$$$Ctrl+N</tags>
-          <tags>persp.editorOnboardingCommand:Open Type$$$Ctrl+Shift+T</tags>
           <tags>persp.viewSC:org.eclipse.mylyn.tasks.ui.views.tasks</tags>
           <tags>persp.newWizSC:org.eclipse.mylyn.tasks.ui.wizards.new.repository.task</tags>
           <tags>persp.actionSet:org.eclipse.debug.ui.breakpointActionSet</tags>
@@ -80,6 +75,12 @@
           <tags>persp.viewSC:org.eclipse.tm.terminal.view.ui.TerminalsView</tags>
           <tags>persp.showIn:org.eclipse.tm.terminal.view.ui.TerminalsView</tags>
           <tags>persp.viewSC:org.eclipse.ant.ui.views.AntView</tags>
+          <tags>persp.editorOnboardingImageUri:platform:/plugin/org.eclipse.jdt.ui/$nl$/icons/full/onboarding_jperspective.png</tags>
+          <tags>persp.editorOnboardingText:Open a file or drop files here to open them.</tags>
+          <tags>persp.editorOnboardingCommand:Find Actions$$$Ctrl+3</tags>
+          <tags>persp.editorOnboardingCommand:Show Key Assist$$$Ctrl+Shift+L</tags>
+          <tags>persp.editorOnboardingCommand:New$$$Ctrl+N</tags>
+          <tags>persp.editorOnboardingCommand:Open Type$$$Ctrl+Shift+T</tags>
           <children xsi:type="basic:PartSashContainer" xmi:id="_hY0V8hxREfCFNfQv6Li-JA" selectedElement="_hY0V8xxREfCFNfQv6Li-JA" horizontal="true">
             <children xsi:type="basic:PartSashContainer" xmi:id="_hY0V8xxREfCFNfQv6Li-JA" containerData="2500" selectedElement="_hY0V9BxREfCFNfQv6Li-JA">
               <children xsi:type="basic:PartSashContainer" xmi:id="_hY0V9BxREfCFNfQv6Li-JA" containerData="6000" selectedElement="_hY0V9RxREfCFNfQv6Li-JA">
@@ -389,7 +390,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_hNXT4hxREfCFNfQv6Li-JA" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_hNhE5xxREfCFNfQv6Li-JA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_gwZFiBxREfCFNfQv6Li-JA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_CJZFICDpEfCvp8fK-nY-pw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_gwZFiBxREfCFNfQv6Li-JA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_hNXT4xxREfCFNfQv6Li-JA" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -397,8 +398,8 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_hNXT5RxREfCFNfQv6Li-JA" elementId="org.eclipse.ui.workbench.edit">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_hNhE7RxREfCFNfQv6Li-JA" elementId="undo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/undo_edit.png" tooltip="Undo" enabled="false" command="_gwPUPBxREfCFNfQv6Li-JA"/>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_hNhE7hxREfCFNfQv6Li-JA" elementId="redo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/redo_edit.png" tooltip="Redo" enabled="false" command="_gwZEOxxREfCFNfQv6Li-JA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_CJZsMCDpEfCvp8fK-nY-pw" elementId="undo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/undo_edit.png" tooltip="Undo" enabled="false" command="_gwPUPBxREfCFNfQv6Li-JA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_CJZsMSDpEfCvp8fK-nY-pw" elementId="redo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/redo_edit.png" tooltip="Redo" enabled="false" command="_gwZEOxxREfCFNfQv6Li-JA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_hNXT5hxREfCFNfQv6Li-JA" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -419,7 +420,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_hNXT6hxREfCFNfQv6Li-JA" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_hNhE9BxREfCFNfQv6Li-JA" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_gwZFQRxREfCFNfQv6Li-JA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_CJaTQCDpEfCvp8fK-nY-pw" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_gwZFQRxREfCFNfQv6Li-JA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_hNXT6xxREfCFNfQv6Li-JA" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -2578,7 +2579,7 @@
   <addons xmi:id="_gvGDlhxREfCFNfQv6Li-JA" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
   <addons xmi:id="_gvGDlxxREfCFNfQv6Li-JA" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_gvkkoBxREfCFNfQv6Li-JA" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
-  <addons xmi:id="_IYS0IKimEeS11vbz3f9ezw" elementId="org.eclipse.ui.ide.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+  <addons xmi:id="_BtcI8SDpEfCvp8fK-nY-pw" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
   <addons xmi:id="_dz0JgGOlEeSMMaPQU2nlzw" elementId="org.eclipse.ui.ide.application.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.ide.application/org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon"/>
   <categories xmi:id="_gwPTABxREfCFNfQv6Li-JA" elementId="org.eclipse.team.ui.category.team" name="Version control (Team)" description="Actions that apply when working with a version control system"/>
   <categories xmi:id="_gwPTARxREfCFNfQv6Li-JA" elementId="org.eclipse.ui.category.views" name="Views" description="Commands for opening views"/>

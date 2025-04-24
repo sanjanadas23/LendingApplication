@@ -40,7 +40,7 @@ export class ApplyLoanComponent implements OnInit {
   successMessage: string | null = null;
   customerId: number | null;
   displayedDocumentColumns: string[] = ['documentType', 'fileName', 'viewDocument', 'actions'];
-
+  docType:any
   constructor(
     private customerService: CustomerService,
     private authService: AuthService,
@@ -53,8 +53,8 @@ export class ApplyLoanComponent implements OnInit {
       amount: ['', [Validators.required, Validators.min(1000)]]
     });
     this.documentForm = this.fb.group({
-      documentTypeId: ['', Validators.required],
-      file: [null, Validators.required]
+      documentTypeId: [''],
+      file: [null]
     });
   }
 
@@ -110,7 +110,7 @@ export class ApplyLoanComponent implements OnInit {
       formData.append('documentName', documentName);
       formData.append('documentTypeId', documentTypeId.toString());
       formData.append('customerId', this.customerId!.toString());
-
+      
       this.customerService.uploadDocument(formData).subscribe({
         next: (doc) => {
           const currentDocs = this.uploadedDocuments.data;
@@ -129,14 +129,30 @@ export class ApplyLoanComponent implements OnInit {
       this.errorMessage = 'Please select a document type and file before uploading.';
     }
   }
-
+ docList=[]
+ count:any
+  getAllDocuments(){
+    this.customerService.getCustomerAllDocuments(3).subscribe({
+      next:response=>{
+        this.docList=response
+        this.count=this.docList.length
+        console.log("Document List"+this.docList);
+        
+        alert(this.count)
+      },
+      error:error=>{
+        console.log("Rejected");
+        
+      }
+    })
+  }
   removeDocument(documentId: number): void {
     this.uploadedDocuments.data = this.uploadedDocuments.data.filter(doc => doc.documentId !== documentId);
     this.uploadedDocumentIds = this.uploadedDocumentIds.filter(id => id !== documentId);
   }
 
   applyLoan(): void {
-    if (this.applyForm.valid && this.documentTypes.length > 0 && this.uploadedDocuments.data.length > 0) {
+    if ( this.documentTypes.length > 0 && this.uploadedDocuments.data.length > 0) {
       this.errorMessage = null;
       this.successMessage = null;
 
@@ -181,8 +197,8 @@ export class ApplyLoanComponent implements OnInit {
   }
 
   getDocumentTypeName(documentTypeId: number): string {
-    const docType = this.documentTypes.find(dt => dt.id === documentTypeId);
-    return docType ? docType.typeName : 'Unknown';
+     this.docType = this.documentTypes.find(dt => dt.id === documentTypeId);
+    return this.docType ? this.docType.typeName : 'Unknown';
   }
 }
 

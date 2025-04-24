@@ -16,6 +16,7 @@ export class CustomerService {
     private authService: AuthService
   ) { }
 
+
   private getAuthHeaders(isFormData: boolean = false): HttpHeaders {
     const token = this.authService.getToken();
     let headers = new HttpHeaders();
@@ -79,6 +80,9 @@ export class CustomerService {
     );
   }
 
+  getCustomerAllDocuments(customerId: number): Observable<any>{
+    return this.http.get<any>(`${this.apiUrl}/documents/getByCustomerId/customer/${customerId}`)
+  }
   updateDocumentLoanIds(documentIds: number[], loanId: number): Observable<void> {
     return this.http.post<void>(`${this.apiUrl}/documents/update-loan?loanId=${loanId}`, documentIds, { headers: this.getAuthHeaders() }).pipe(
       tap(() => console.log(`Updated loanId ${loanId} for documentIds:`, documentIds)),
