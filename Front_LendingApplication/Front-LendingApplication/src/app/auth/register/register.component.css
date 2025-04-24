@@ -1,95 +1,108 @@
+/* Register Container */
 .register-container {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    font-family: 'Segoe UI', sans-serif;
-    color: #000000;
-  }
-  
-  .register-container h2 {
-    margin-bottom: 24px;
-    font-size: 28px;
-    color: #000000;
-    text-align: center;
-  }
-  
-  .register-card {
-    width: 100%;
-    max-width: 500px;
-    background-color: #ffffff;
-    border: 1px solid #000000;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-  
-  .register-card mat-card-header {
-    background-color: #000000;
-    color: #ffffff;
-    padding: 16px;
-    border-radius: 8px 8px 0 0;
-  }
-  
-  .register-card mat-card-content {
-    padding: 16px;
-  }
-  
-  .register-card form {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  
-  .register-card mat-form-field {
-    width: 100%;
-  }
-  
-  .register-card form button {
-    align-self: flex-end;
-    padding: 8px 16px;
-    background-color: #ffffff;
-    color: #000000;
-    border: 1px solid #000000;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .register-card form button:hover {
-    background-color: #f0f0f0;
-  }
-  
-  .register-card mat-card-actions {
-    padding: 0 16px 16px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .register-card mat-card-actions a {
-    color: #000000;
-    font-weight: 500;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .register-card mat-card-actions a:hover {
-    color: #555555;
-  }
-  
-  .error-message {
-    color: #d32f2f;
-    margin-bottom: 16px;
-    text-align: center;
-    font-size: 16px;
-  }
-  
-  .success-message {
-    color: #2e7d32;
-    margin-bottom: 16px;
-    text-align: center;
-    font-size: 16px;
-  }
-  
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #e0e0e0; /* Light shade of the header color #333 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  color: #000000;
+}
+
+/* Register Header Styling */
+.register-container h2 {
+  margin-bottom: 24px;
+  font-size: 28px;
+  color: #000000; /* Black for the header text */
+  text-align: center;
+}
+
+/* Register Card Styling */
+.register-card {
+  width: 100%;
+  max-width: 500px;
+  background-color: #ffffff; /* White background for the card */
+  border: 1px solid #000000; /* Black border for the card */
+  border-radius: 12px; /* Rounded corners for the card */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Card Header Styling */
+.register-card mat-card-header {
+  background-color: #333; /* Dark gray background for header */
+  color: #ffffff; /* White text */
+  padding: 16px;
+  border-radius: 12px 12px 0 0; /* Rounded top corners */
+}
+
+/* Card Content Styling */
+.register-card mat-card-content {
+  padding: 16px;
+}
+
+/* Form Layout */
+.register-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Form Field Styling */
+.register-card mat-form-field {
+  width: 100%;
+}
+
+/* Button Styling */
+.register-card form button {
+  align-self: flex-end;
+  padding: 8px 16px;
+  background-color: #ffffff; /* White background for the button */
+  color: #000000; /* Black text for the button */
+  border: 1px solid #000000; /* Black border */
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+.register-card form button:hover {
+  background-color: #f0f0f0; /* Light gray hover effect */
+}
+
+/* Card Actions Styling */
+.register-card mat-card-actions {
+  padding: 0 16px 16px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Link Styling */
+.register-card mat-card-actions a {
+  color: #000000; /* Black text for the link */
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Link Hover Effect */
+.register-card mat-card-actions a:hover {
+  color: #555555; /* Lighter gray color on hover */
+}
+
+/* Error Message Styling */
+.error-message {
+  color: #d32f2f; /* Muted red for error message */
+  margin-bottom: 16px;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Success Message Styling */
+.success-message {
+  color: #2e7d32; /* Green for success message */
+  margin-bottom: 16px;
+  text-align: center;
+  font-size: 16px;
+}

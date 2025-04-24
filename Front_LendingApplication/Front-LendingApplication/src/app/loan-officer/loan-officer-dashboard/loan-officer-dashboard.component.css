@@ -1,6 +1,6 @@
 .dashboard-container {
-  padding: 40px 24px;
-  background-color: #ffffff;
+  padding: 48px 32px; /* Increased padding */
+  background-color: #e0e0e0; /* Light shade of the header color */
   font-family: 'Segoe UI', sans-serif;
   color: #000000;
   min-height: 100vh;
@@ -8,24 +8,25 @@
 }
 
 .dashboard-container h2 {
-  font-size: 32px;
-  font-weight: 600;
+  font-size: 36px; /* Increased font size */
+  font-weight: 700; /* Increased font weight */
   color: #111111;
-  margin-bottom: 20px; /* Reduced margin bottom */
+  margin-bottom: 40px; /* Increased margin bottom */
 }
 
-/* Flexbox layout with 3 boxes on top and 2 below */
+/* Update to a 3x2 grid layout with flexbox */
 .cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
-  gap: 16px; /* Reduced gap */
-  margin-bottom: 20px; /* Reduced margin bottom */
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping to next line */
+  gap: 32px; /* Increased space between the cards */
+  justify-content: center; /* Centers the cards horizontally */
+  margin-bottom: 40px; /* Increased margin bottom */
 }
 
 @media (max-width: 768px) {
   .cards {
     grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
-    gap: 12px; /* Reduced gap for smaller screens */
+    gap: 16px; /* Adjusted gap */
   }
 }
 
@@ -38,6 +39,9 @@
 
 /* Card styles */
 .dashboard-card {
+  flex: 1 1 calc(33.333% - 32px); /* Takes 1/3rd width, minus spacing */
+  max-width: 300px; /* Max width of each card */
+  min-width: 280px; /* Min width for responsiveness */
   border: 1px solid #000000;
   border-radius: 12px;
   background-color: #ffffff;
@@ -50,9 +54,9 @@
 }
 
 mat-card-header {
-  background-color: #000000;
+  background-color: #333; /* Dark gray header */
   color: #ffffff;
-  padding: 12px; /* Reduced padding */
+  padding: 16px; /* Increased padding */
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   display: flex;
@@ -65,7 +69,7 @@ mat-card-title {
 }
 
 mat-card-content {
-  padding: 20px; /* Reduced padding */
+  padding: 24px; /* Increased padding */
   font-size: 16px;
   color: #333333;
   min-height: 100px;
@@ -74,16 +78,16 @@ mat-card-content {
 mat-card-actions {
   display: flex;
   justify-content: center;
-  padding: 16px; /* Reduced padding */
+  padding: 20px; /* Increased padding */
 }
 
 mat-card-actions button {
-  padding: 10px 20px; /* Reduced button padding */
+  padding: 12px 24px; /* Increased button padding */
   border: 1px solid #000000;
   background-color: #ffffff;
   color: #000000;
   font-weight: 600;
-  font-size: 14px; /* Reduced font size */
+  font-size: 15px; /* Increased font size */
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -93,13 +97,13 @@ mat-card-actions button:hover {
 }
 
 .error-message {
-  color: #721c24;
-  background-color: #f8d7da;
+  color: #d32f2f; /* Red error message */
+  background-color: #f8d7da; /* Light red background for error */
   border: 1px solid #f5c6cb;
-  padding: 12px; /* Reduced padding */
+  padding: 16px; /* Increased padding */
   border-radius: 6px;
-  margin-bottom: 20px; /* Reduced margin bottom */
-  max-width: 800px;
+  margin-top: 32px; /* Increased margin top */
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -108,5 +112,5 @@ mat-card-actions button:hover {
   text-align: center;
   color: #999999;
   margin-top: 16px;
-  font-size: 14px; /* Reduced font size */
+  font-size: 14px;
 }

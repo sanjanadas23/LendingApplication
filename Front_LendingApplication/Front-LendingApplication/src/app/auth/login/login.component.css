@@ -1,103 +1,117 @@
+/* Login Container */
 .login-container {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    font-family: 'Segoe UI', sans-serif;
-    color: #000000;
-  }
-  
-  .login-container h2 {
-    margin-bottom: 24px;
-    font-size: 28px;
-    color: #000000;
-    text-align: center;
-  }
-  
-  .login-container .login-card {
-    width: 100%;
-    max-width: 500px;
-    background-color: #ffffff;
-    border: 1px solid #000000;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-  
-  .login-container .login-card mat-card-header {
-    background-color: #000000;
-    color: #ffffff;
-    padding: 16px;
-    border-radius: 8px 8px 0 0;
-  }
-  
-  .login-container .login-card mat-card-content {
-    padding: 16px;
-  }
-  
-  .login-container .login-card mat-card-content form {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  
-  .login-container .login-card mat-card-content mat-form-field {
-    width: 100%;
-  }
-  
-  .login-container .login-card mat-card-content button {
-    align-self: flex-end;
-    padding: 8px 16px;
-    background-color: #ffffff;
-    color: #000000;
-    border: 1px solid #000000;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .login-container .login-card mat-card-content button:hover {
-    background-color: #f0f0f0;
-  }
-  
-  .login-container .login-card mat-card-actions {
-    padding: 0 16px 16px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .login-container .login-card mat-card-actions a {
-    color: #000000;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-  }
-  
-  .login-container .login-card mat-card-actions a:hover {
-    color: #555555;
-  }
-  
-  .login-container .error-message {
-    color: #d32f2f;
-    margin-bottom: 16px;
-    text-align: center;
-    font-size: 16px;
-  }
-  
-  .login-container .register-link {
-    color: #000000;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-  }
-  
-  .login-container .register-link:hover {
-    text-decoration: underline;
-    color: #555555;
-  }
-  
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #e0e0e0; /* Light shade of the header color */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  color: #000000;
+}
+
+/* Header Styling */
+.login-container h2 {
+  margin-bottom: 24px;
+  font-size: 28px;
+  color: #000000;
+  text-align: center;
+}
+
+/* Login Card Styling */
+.login-container .login-card {
+  width: 100%;
+  max-width: 500px;
+  background-color: #ffffff; /* White background for the card */
+  border: 1px solid #000000; /* Black border */
+  border-radius: 12px; /* Slightly more rounded corners */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Card Header Styling */
+.login-container .login-card mat-card-header {
+  background-color: #333; /* Dark gray header */
+  color: #ffffff;
+  padding: 16px;
+  border-radius: 12px 12px 0 0;
+}
+
+/* Card Content Styling */
+.login-container .login-card mat-card-content {
+  padding: 16px;
+}
+
+/* Form Layout */
+.login-container .login-card mat-card-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Form Field Styling */
+.login-container .login-card mat-card-content mat-form-field {
+  width: 100%;
+}
+
+/* Button Styling */
+.login-container .login-card mat-card-content button {
+  align-self: flex-end;
+  padding: 8px 16px;
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+.login-container .login-card mat-card-content button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Card Actions Styling */
+.login-container .login-card mat-card-actions {
+  padding: 0 16px 16px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Link Styling */
+.login-container .login-card mat-card-actions a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Link Hover Effect */
+.login-container .login-card mat-card-actions a:hover {
+  color: #555555;
+}
+
+/* Error Message Styling */
+.login-container .error-message {
+  color: #d32f2f;
+  margin-bottom: 16px;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Register Link Styling */
+.login-container .register-link {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* Register Link Hover Effect */
+.login-container .register-link:hover {
+  text-decoration: underline;
+  color: #555555;
+}
