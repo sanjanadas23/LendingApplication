@@ -1,6 +1,6 @@
 .dashboard-container {
-  padding: 40px 24px;
-  background-color: #ffffff;
+  padding: 48px 32px; /* Increased padding */
+  background-color: #e0e0e0; /* Light shade of the header color */
   font-family: 'Segoe UI', sans-serif;
   color: #000000;
   min-height: 100vh;
@@ -8,124 +8,102 @@
 }
 
 .dashboard-container h2 {
-  font-size: 32px;
-  font-weight: 600;
+  font-size: 36px; /* Increased font size */
+  font-weight: 700; /* Increased font weight */
   color: #111111;
-  margin-bottom: 32px;
+  margin-bottom: 40px; /* Increased margin bottom */
 }
 
-/* Horizontal scrollable cards row */
+/* Update to a 3x2 grid layout with flexbox */
 .cards {
   display: flex;
-  gap: 24px;
-  overflow-x: auto;
-  padding: 16px 0;
-  margin-bottom: 32px;
-  scrollbar-width: none;
+  flex-wrap: wrap; /* Allows wrapping to next line */
+  gap: 32px; /* Increased space between the cards */
+  justify-content: center; /* Centers the cards horizontally */
+  margin-bottom: 40px; /* Increased margin bottom */
 }
 
-.cards::-webkit-scrollbar {
-  display: none;
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    gap: 16px; /* Adjusted gap */
+  }
 }
 
-/* Ensure individual cards align properly */
-.cards app-dashboard-card {
-  flex-shrink: 0;
-  width: 280px;
+@media (max-width: 480px) {
+  .cards {
+    grid-template-columns: 1fr; /* 1 column on extra small screens */
+    gap: 8px; /* Even smaller gap */
+  }
 }
 
-/* Table cards layout */
-.table-card {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto 32px auto;
+/* Card styles */
+.dashboard-card {
+  flex: 1 1 calc(33.333% - 32px); /* Takes 1/3rd width, minus spacing */
+  max-width: 300px; /* Max width of each card */
+  min-width: 280px; /* Min width for responsiveness */
   border: 1px solid #000000;
-  border-radius: 10px;
+  border-radius: 12px;
   background-color: #ffffff;
-  box-shadow: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 mat-card-header {
-  background-color: #000000;
+  background-color: #333; /* Dark gray header */
   color: #ffffff;
-  padding: 16px;
-  border-radius: 10px 10px 0 0;
+  padding: 16px; /* Increased padding */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
   display: flex;
   justify-content: center;
 }
 
 mat-card-title {
-  font-size: 20px;
+  font-size: 1.3em;
   font-weight: 600;
-  text-align: center;
-  width: 100%;
 }
 
 mat-card-content {
-  padding: 24px;
+  padding: 24px; /* Increased padding */
+  font-size: 16px;
+  color: #333333;
+  min-height: 100px;
 }
 
-mat-table {
-  width: 100%;
-  border: 1px solid #000000;
-  border-radius: 8px;
-  overflow: auto;
-  text-align: left;
+mat-card-actions {
+  display: flex;
+  justify-content: center;
+  padding: 20px; /* Increased padding */
 }
 
-mat-header-cell,
-mat-cell {
-  padding: 12px;
-  font-size: 15px;
-  border-bottom: 1px solid #000000;
-  vertical-align: middle;
-}
-
-mat-header-cell {
-  background-color: #000000;
-  color: #ffffff;
-  font-weight: 600;
-}
-
-mat-cell {
-  color: #000000;
-}
-
-/* Buttons inside mat-cell */
-mat-cell button {
-  padding: 8px 14px;
-  font-size: 14px;
-  margin: 0 4px;
+mat-card-actions button {
+  padding: 12px 24px; /* Increased button padding */
   border: 1px solid #000000;
   background-color: #ffffff;
   color: #000000;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 15px; /* Increased font size */
   cursor: pointer;
   transition: background-color 0.3s ease;
-  white-space: nowrap;
 }
 
-mat-cell button:hover {
+mat-card-actions button:hover {
   background-color: #f0f0f0;
 }
 
-mat-cell button[color="warn"] {
-  border-color: #d32f2f;
-  color: #d32f2f;
-}
-
-mat-cell button[color="warn"]:hover {
-  background-color: #fbe9e7;
-}
-
 .error-message {
-  color: #721c24;
-  background-color: #f8d7da;
+  color: #d32f2f; /* Red error message */
+  background-color: #f8d7da; /* Light red background for error */
   border: 1px solid #f5c6cb;
-  padding: 16px;
+  padding: 16px; /* Increased padding */
   border-radius: 6px;
-  margin-bottom: 24px;
-  max-width: 800px;
+  margin-top: 32px; /* Increased margin top */
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -134,5 +112,5 @@ mat-cell button[color="warn"]:hover {
   text-align: center;
   color: #999999;
   margin-top: 16px;
-  font-size: 16px;
+  font-size: 14px;
 }
