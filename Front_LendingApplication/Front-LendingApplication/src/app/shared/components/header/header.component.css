@@ -1,4 +1,4 @@
-mat-toolbar {
+/* mat-toolbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,4 +30,45 @@ mat-toolbar {
         align-items: center;
         gap: 12px;
     }
-}
+} */
+
+
+mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; /* Dark background for toolbar */
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  
+    .logo {
+      width: 10vw;
+      max-width: 80px;
+      min-width: 40px;
+      height: auto;
+      cursor: pointer;
+    }
+  }
+  
+  .header-middle {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700; /* Bold text */
+    color: #555; /* Set color to #555 */
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  mat-toolbar * {
+    color: white; /* Ensures all text in the toolbar is white */
+  }
+  

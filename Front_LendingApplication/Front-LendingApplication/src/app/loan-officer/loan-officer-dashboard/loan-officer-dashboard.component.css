@@ -11,120 +11,94 @@
   font-size: 32px;
   font-weight: 600;
   color: #111111;
-  margin-bottom: 32px;
+  margin-bottom: 20px; /* Reduced margin bottom */
 }
 
-/* Horizontal scrollable cards row */
+/* Flexbox layout with 3 boxes on top and 2 below */
 .cards {
-  display: flex;
-  gap: 24px;
-  overflow-x: auto;
-  padding: 16px 0;
-  margin-bottom: 32px;
-  scrollbar-width: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+  gap: 16px; /* Reduced gap */
+  margin-bottom: 20px; /* Reduced margin bottom */
 }
 
-.cards::-webkit-scrollbar {
-  display: none;
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    gap: 12px; /* Reduced gap for smaller screens */
+  }
 }
 
-/* Ensure individual cards align properly */
-.cards app-dashboard-card {
-  flex-shrink: 0;
-  width: 280px;
+@media (max-width: 480px) {
+  .cards {
+    grid-template-columns: 1fr; /* 1 column on extra small screens */
+    gap: 8px; /* Even smaller gap */
+  }
 }
 
-/* Table cards layout */
-.table-card {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto 32px auto;
+/* Card styles */
+.dashboard-card {
   border: 1px solid #000000;
-  border-radius: 10px;
+  border-radius: 12px;
   background-color: #ffffff;
-  box-shadow: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 mat-card-header {
   background-color: #000000;
   color: #ffffff;
-  padding: 16px;
-  border-radius: 10px 10px 0 0;
+  padding: 12px; /* Reduced padding */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
   display: flex;
   justify-content: center;
 }
 
 mat-card-title {
-  font-size: 20px;
+  font-size: 1.3em;
   font-weight: 600;
-  text-align: center;
-  width: 100%;
 }
 
 mat-card-content {
-  padding: 24px;
+  padding: 20px; /* Reduced padding */
+  font-size: 16px;
+  color: #333333;
+  min-height: 100px;
 }
 
-mat-table {
-  width: 100%;
-  border: 1px solid #000000;
-  border-radius: 8px;
-  overflow: auto;
-  text-align: left;
+mat-card-actions {
+  display: flex;
+  justify-content: center;
+  padding: 16px; /* Reduced padding */
 }
 
-mat-header-cell,
-mat-cell {
-  padding: 12px;
-  font-size: 15px;
-  border-bottom: 1px solid #000000;
-  vertical-align: middle;
-}
-
-mat-header-cell {
-  background-color: #000000;
-  color: #ffffff;
-  font-weight: 600;
-}
-
-mat-cell {
-  color: #000000;
-}
-
-/* Buttons inside mat-cell */
-mat-cell button {
-  padding: 8px 14px;
-  font-size: 14px;
-  margin: 0 4px;
+mat-card-actions button {
+  padding: 10px 20px; /* Reduced button padding */
   border: 1px solid #000000;
   background-color: #ffffff;
   color: #000000;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 14px; /* Reduced font size */
   cursor: pointer;
   transition: background-color 0.3s ease;
-  white-space: nowrap;
 }
 
-mat-cell button:hover {
+mat-card-actions button:hover {
   background-color: #f0f0f0;
-}
-
-mat-cell button[color="warn"] {
-  border-color: #d32f2f;
-  color: #d32f2f;
-}
-
-mat-cell button[color="warn"]:hover {
-  background-color: #fbe9e7;
 }
 
 .error-message {
   color: #721c24;
   background-color: #f8d7da;
   border: 1px solid #f5c6cb;
-  padding: 16px;
+  padding: 12px; /* Reduced padding */
   border-radius: 6px;
-  margin-bottom: 24px;
+  margin-bottom: 20px; /* Reduced margin bottom */
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -134,5 +108,5 @@ mat-cell button[color="warn"]:hover {
   text-align: center;
   color: #999999;
   margin-top: 16px;
-  font-size: 16px;
+  font-size: 14px; /* Reduced font size */
 }
