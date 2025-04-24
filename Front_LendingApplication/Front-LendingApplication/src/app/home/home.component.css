@@ -1,206 +1,205 @@
 .home-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #ffffff;
-    color: #000000;
-    min-height: 100vh;
-    font-family: 'Segoe UI', sans-serif;
-  }
-  
-  .home-container section {
-    width: 100%;
-    padding: 60px 24px;
-    text-align: center;
-  }
-  
-  .home-container h2 {
-    font-size: 32px;
-    font-weight: 600;
-    color: #111111;
-    margin-bottom: 32px;
-  }
-  
-  /* HERO SECTION */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e0e0e0; /* Light shade of the header color */
+  color: #000000;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.home-container section {
+  width: 100%;
+  padding: 60px 24px;
+  text-align: center;
+}
+
+.home-container h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #111111;
+  margin-bottom: 32px;
+}
+
+/* HERO SECTION */
+.hero {
+  background-color: #ffffff; /* White background for consistency */
+  color: #000000;
+  padding: 100px 24px;
+}
+
+.hero .hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero .hero-content h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.hero .hero-content p {
+  font-size: 20px;
+  color: #444444;
+  margin-bottom: 32px;
+}
+
+.hero .hero-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero .hero-actions button {
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #000000;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero .hero-actions button:hover {
+  background-color: #f0f0f0;
+}
+
+/* FEATURES SECTION */
+.features {
+  background-color: #ffffff;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  padding: 24px;
+  transition: transform 0.25s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+}
+
+.feature-card mat-icon {
+  font-size: 42px;
+  color: #000000;
+  margin-bottom: 16px;
+}
+
+.feature-card p {
+  font-size: 16px;
+  color: #333333;
+  line-height: 1.5;
+}
+
+/* LOANS SECTION */
+.loans {
+  background-color: #ffffff;
+}
+
+.loan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.loan-card {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.loan-card p {
+  font-size: 16px;
+  color: #333333;
+  line-height: 1.5;
+}
+
+.loan-card button {
+  margin-top: 16px;
+  background: none;
+  border: none;
+  color: #000000;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.loan-card button:hover {
+  color: #444444;
+}
+
+/* ABOUT SECTION */
+.about {
+  background-color: #ffffff;
+}
+
+.about-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  padding: 32px;
+}
+
+.about-card p {
+  font-size: 16px;
+  color: #444444;
+  line-height: 1.6;
+}
+
+.about-card button {
+  margin-top: 20px;
+  background: none;
+  border: none;
+  color: #000000;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.about-card button:hover {
+  color: #555555;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 600px) {
   .hero {
-    background-color: #ffffff; /* Removed gradient */
-    color: #000000;
-    padding: 100px 24px;
+    padding: 60px 20px;
   }
-  
-  .hero .hero-content {
-    max-width: 800px;
-    margin: 0 auto;
+
+  .hero h1 {
+    font-size: 28px;
   }
-  
-  .hero .hero-content h1 {
-    font-size: 40px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #000000;
-  }
-  
-  .hero .hero-content p {
-    font-size: 20px;
-    color: #444444;
-    margin-bottom: 32px;
-  }
-  
-  .hero .hero-actions {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .hero .hero-actions button {
-    padding: 14px 28px;
+
+  .hero p {
     font-size: 16px;
-    font-weight: 500;
-    border: 1px solid #000000;
-    border-radius: 6px;
-    background-color: #ffffff;
-    color: #000000;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
   }
-  
-  .hero .hero-actions button:hover {
-    background-color: #f0f0f0;
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 12px;
   }
-  
-  /* FEATURES SECTION */
-  .features {
-    background-color: #ffffff;
+
+  .home-container h2 {
+    font-size: 24px;
   }
-  
-  .feature-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 32px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .feature-card {
-    background-color: #ffffff;
-    border: 1px solid #000000;
-    border-radius: 10px;
-    padding: 24px;
-    transition: transform 0.25s ease;
-  }
-  
-  .feature-card:hover {
-    transform: translateY(-6px);
-  }
-  
-  .feature-card mat-icon {
-    font-size: 42px;
-    color: #000000;
-    margin-bottom: 16px;
-  }
-  
-  .feature-card p {
-    font-size: 16px;
-    color: #333333;
-    line-height: 1.5;
-  }
-  
-  /* LOANS SECTION */
-  .loans {
-    background-color: #ffffff;
-  }
-  
-  .loan-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 32px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .loan-card {
-    background-color: #ffffff;
-    border: 1px solid #000000;
-    border-radius: 10px;
-    padding: 24px;
-  }
-  
-  .loan-card p {
-    font-size: 16px;
-    color: #333333;
-    line-height: 1.5;
-  }
-  
-  .loan-card button {
-    margin-top: 16px;
-    background: none;
-    border: none;
-    color: #000000;
-    font-weight: 500;
-    cursor: pointer;
-    transition: color 0.3s;
-  }
-  
-  .loan-card button:hover {
-    color: #444444;
-  }
-  
-  /* ABOUT SECTION */
-  .about {
-    background-color: #ffffff;
-  }
-  
-  .about-card {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    border: 1px solid #000000;
-    border-radius: 10px;
-    padding: 32px;
-  }
-  
-  .about-card p {
-    font-size: 16px;
-    color: #444444;
-    line-height: 1.6;
-  }
-  
-  .about-card button {
-    margin-top: 20px;
-    background: none;
-    border: none;
-    color: #000000;
-    font-weight: 500;
-    cursor: pointer;
-    transition: color 0.3s;
-  }
-  
-  .about-card button:hover {
-    color: #555555;
-  }
-  
-  /* RESPONSIVE DESIGN */
-  @media (max-width: 600px) {
-    .hero {
-      padding: 60px 20px;
-    }
-  
-    .hero h1 {
-      font-size: 28px;
-    }
-  
-    .hero p {
-      font-size: 16px;
-    }
-  
-    .hero-actions {
-      flex-direction: column;
-      gap: 12px;
-    }
-  
-    .home-container h2 {
-      font-size: 24px;
-    }
-  }
-  
+}
