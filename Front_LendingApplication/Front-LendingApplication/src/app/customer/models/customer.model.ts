@@ -1,11 +1,22 @@
+// export interface Loan {
+//     loanId: number;
+//     customerId: number;
+//     schemeId: number;
+//     amount: number;
+//     status: string;
+//     loanSchemeName: string;
+//   }
 export interface Loan {
-    loanId: number;
-    customerId: number;
-    schemeId: number;
-    amount: number;
-    status: string;
-    loanSchemeName: string;
-  }
+  loanId: number;
+  amount: number;
+  loanSchemeName: string;
+  statusName: string;
+  applicationDate: string;
+  dueDate: string;
+  loanOfficerId: number;
+  customerId: number;
+  isNpa: boolean;
+}
   
   export interface LoanPayment {
     id: number;
@@ -16,12 +27,20 @@ export interface Loan {
     penaltyAmount: number;
   }
   
+  // export interface LoanScheme {
+  //   id: number;
+  //   name: string;
+  //   interestRate: number;
+  //   tenure: number;
+  //   isDeleted: boolean;
+  // }
+
   export interface LoanScheme {
     id: number;
-    name: string;
+    name: string; // was schemeName in backend
     interestRate: number;
     tenure: number;
-    isDeleted: boolean;
+    isDeleted?: boolean;
   }
   
   export interface Document {
