@@ -116,10 +116,10 @@ export class MakePaymentComponent implements OnInit {
         this.loading = false;
         // Simulate Razorpay payment
         const options = {
-          key: 'rzp_test_key',
+          key: 'rzp_test_x5RcKawoysYwvP',
           amount: 0,
           currency: 'INR',
-          name: 'LendEase',
+          name: 'FINOVA',
           description: 'Loan Payment',
           order_id: orderId,
           handler: (response: any) => {
@@ -153,10 +153,10 @@ export class MakePaymentComponent implements OnInit {
 
   completePayment(response: any, paymentId: number): void {
     const paymentData = {
-      razorpay_payment_id: response.razorpay_payment_id,
-      razorpay_order_id: response.razorpay_order_id,
-      razorpay_signature: response.razorpay_signature,
-      paymentId: paymentId
+    orderId: response.razorpay_order_id,  // correct key name
+    paymentId: response.razorpay_payment_id,  // correct key name
+    signature: response.razorpay_signature,  // correct key name
+    loanPaymentId: paymentId  // correct key name
     };
 
     this.customerService.completePayment(paymentData).subscribe({

@@ -319,6 +319,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.aurionpro.lending.dto.CustomerResponseDTO;
+import com.aurionpro.lending.dto.ProfileResponseDTO;
 import com.aurionpro.lending.entity.Customer;
 import com.aurionpro.lending.entity.LoanOfficer;
 import com.aurionpro.lending.entity.User;
@@ -447,4 +448,29 @@ public class CustomerServiceImpl implements CustomerService {
         }
         return dto;
     }
+
+    @Override
+	public ProfileResponseDTO getCustomerProfile(int customerId) {
+		Customer customer = customerRepository.findById(customerId)
+				.orElseThrow(() -> new ResourceNotFoundException("Customer not found with ID: " + customerId));
+
+		User user = customer.getUser();
+		if (user == null) {
+			throw new ResourceNotFoundException("User details not found for Customer ID: " + customerId);
+		}
+
+		ProfileResponseDTO profile = new ProfileResponseDTO();
+		profile.setId(customer.getId());
+		profile.setUsername(user.getUsername());
+		profile.setEmail(user.getEmail());
+		profile.setRoleName(user.getRole() != null ? user.getRole().getRoleName() : null);
+		profile.setFirstName(user.getFirstName());
+		profile.setLastName(user.getLastName());
+		profile.setDateOfBirth(user.getDateOfBirth());
+		profile.setMobileNumber(user.getMobileNumber());
+		profile.setGender(user.getGender());
+
+		return profile;
+	}
+
 }

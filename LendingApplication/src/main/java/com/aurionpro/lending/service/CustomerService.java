@@ -3,6 +3,7 @@ package com.aurionpro.lending.service;
 import java.util.List;
 
 import com.aurionpro.lending.dto.CustomerResponseDTO;
+import com.aurionpro.lending.dto.ProfileResponseDTO;
 
 public interface CustomerService {
 	CustomerResponseDTO getCustomerById(int id);
@@ -16,4 +17,6 @@ public interface CustomerService {
 	void softDeleteCustomer(int id);
 
 	void selfDeleteCustomer(int customerId);
+	
+	ProfileResponseDTO getCustomerProfile(int customerId);
 }

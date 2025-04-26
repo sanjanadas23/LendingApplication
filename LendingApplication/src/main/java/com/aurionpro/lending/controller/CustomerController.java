@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.aurionpro.lending.dto.CustomerResponseDTO;
+import com.aurionpro.lending.dto.ProfileResponseDTO;
 import com.aurionpro.lending.dto.SelfDeleteRequest;
 import com.aurionpro.lending.service.CustomerService;
 
@@ -60,5 +61,11 @@ public class CustomerController {
 	public ResponseEntity<Void> softDeleteCustomer(@Valid @RequestBody SelfDeleteRequest request) {
 		customerService.selfDeleteCustomer(request.getCustomerId());
 		return ResponseEntity.noContent().build();
+	}
+	@GetMapping("/{customerId}/profile")
+	@PreAuthorize("hasRole('ROLE_CUSTOMER') or hasRole('ROLE_LOAN_OFFICER') or hasRole('ROLE_ADMIN')")
+	public ResponseEntity<ProfileResponseDTO> getCustomerProfile(@PathVariable int customerId) {
+		ProfileResponseDTO profile = customerService.getCustomerProfile(customerId);
+		return ResponseEntity.ok(profile);
 	}
 }
